@@ -1,0 +1,6 @@
+const products = [
+{ name: "Moringa Powder - Organic", price: "$24.99", img: "images/moringa.jpg", desc: "200g organic pure leaf powder" },
+{ name: "Neem Detox Tea", price: "$18.99", img: "images/neem.jpg", desc: "Natural herbal detox & skin clarity" },
+{ name: "Hibiscus Glow Tea", price: "$16.99", img: "images/hibiscus.jpg", desc: "Rich antioxidant herbal blend" },
+{ name: "Baobab Superfood", price: "$29.99", img: "images/baobab.jpg", desc: "High Vitamin C energy booster" }
+];
