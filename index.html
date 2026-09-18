@@ -95,7 +95,7 @@ body { font-family: 'Outfit', sans-serif; }
 <script>
 function renderProducts(){
 const container = document.getElementById('products');
-if(!window.products || !Array.isArray(products)){
+if(typeof products === 'undefined' || !Array.isArray(products)){
 container.innerHTML = '<p class="text-red-500">Error loading product data.</p>';
 return;
 }
@@ -127,7 +127,7 @@ setTimeout(() => msgInput.focus(), 500);
 
 function sendWhatsApp(e){
 e.preventDefault();
-const phone = "447874025125";
+const phone = "4407874025125";
 const name = document.getElementById('cName').value;
 const email = document.getElementById('cEmail').value;
 const message = document.getElementById('cMsg').value;
