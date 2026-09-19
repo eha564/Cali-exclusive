@@ -16,7 +16,13 @@ const products = [
     price: "$540",
     img: "image/G47.jpg",
     desc: "Coyote frame with the black slide, RMR HD up top, SureFire X300 on the front, grip tape, and a flat-face trigger. Clean duty-style build ain’t no cheap setup"
-  }
+  },
+  {
+    name: "Gen5 G47 MOS",
+    price: "$400",
+    img: "image/GG.jpg",
+    desc: "Gen 5 G17 MOS. Full size setup with the Holosun SCS sittin’ on top,suppressor height sights, and a flat-face trigger. Clean, simple build ain’t got a bunch of extra stuff on it, just a solid setup."
+  }  
 ];
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = products;
