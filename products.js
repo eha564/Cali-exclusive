@@ -22,6 +22,12 @@ const products = [
     price: "$400",
     img: "image/GG.jpg",
     desc: "Gen 5 G17 MOS. Full size setup with the Holosun SCS sittin’ on top,suppressor height sights, and a flat-face trigger. Clean, simple build ain’t got a bunch of extra stuff on it, just a solid setup."
+  }, 
+  {
+    name: "Gen 5 G17",
+    price: "$400",
+    img: "image/GA.jpg",
+    desc: "Gen 5 G19 with a stainless custom slide. Got the TLR-7X on the front, clean serrations, and factory frame. Simple but tough setup."
   }  
 ];
 if (typeof module !== 'undefined' && module.exports) {
