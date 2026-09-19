@@ -10,6 +10,12 @@ const products = [
     price: "$400",
     img: "image/G17 Gen3, 9mm.jpg",
     desc: "G17 Gen 3, 9mm. Full-size Glock with the long slide, 17-round mag setup, clean black frame and no extra flashy shit on it"
+  },
+  {
+    name: "Gen5 G47 MOS",
+    price: "$540",
+    img: "image/Gen5 G47 MOS.JPG",
+    desc: "Coyote frame with the black slide, RMR HD up top, SureFire X300 on the front, grip tape, and a flat-face trigger. Clean duty-style build ain’t no cheap setup"
   }
 ];
 if (typeof module !== 'undefined' && module.exports) {
