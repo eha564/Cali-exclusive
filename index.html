@@ -7,6 +7,8 @@
 <meta name="description" content="Cali Exclusive - Natural, Trusted, Exclusive herbs for UK & USA. Contact to order.">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+<!-- Netlify Identity Widget for Admin Login -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <style>
 body { font-family: 'Outfit', sans-serif; }
 .text-gold { color: #D4AF37; }
@@ -21,13 +23,13 @@ body { font-family: 'Outfit', sans-serif; }
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm">
 <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 <h1 class="text-2xl font-bold tracking-tight">CALI<span class="text-gold"> EXCLUSIVE</span></h1>
-<nav class="flex gap-4 text-xs font-medium">
-<a href="#home" class="hover:text-green-800 transition">Home</a>
-<a href="#shop" class="hover:text-green-800 transition">Shop</a>
-<a href="#about" class="hover:text-green-800 transition">About</a>
-<a href="#contact" class="hover:text-green-800 transition">Contact</a>
+<nav class="flex gap-4 text-xs font-medium overflow-x-auto py-1">
+<a href="#home" class="hover:text-green-800 transition whitespace-nowrap">Home</a>
+<a href="#shop" class="hover:text-green-800 transition whitespace-nowrap">Shop</a>
+<a href="#about" class="hover:text-green-800 transition whitespace-nowrap">About</a>
+<a href="#contact" class="hover:text-green-800 transition whitespace-nowrap">Contact</a>
 </nav>
-<a href="#contact" class="bg-green-900 hover:bg-green-800 text-white px-5 py-2 rounded-full text-sm font-medium transition">Contact Us</a>
+<a href="#contact" class="bg-green-900 hover:bg-green-800 text-white px-5 py-2 rounded-full text-sm font-medium transition whitespace-nowrap">Contact Us</a>
 </div>
 </header>
 
@@ -138,6 +140,17 @@ window.open(`https://wa.me/${phone}?text=${formattedMsg}`, '_blank');
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
+// Redirect to Admin Panel upon Identity login
+if (window.netlifyIdentity) {
+window.netlifyIdentity.on("init", user => {
+if (!user) {
+window.netlifyIdentity.on("login", () => {
+document.location.href = "/admin/";
+});
+}
+});
+}
 </script>
 </body>
 </html>
