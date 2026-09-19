@@ -14,7 +14,7 @@ const products = [
   {
     name: "Gen5 G47 MOS",
     price: "$540",
-    img: "image/Gen5 G47 MOS.JPG",
+    img: "image/Gen5 G47 MOS.jpg",
     desc: "Coyote frame with the black slide, RMR HD up top, SureFire X300 on the front, grip tape, and a flat-face trigger. Clean duty-style build ain’t no cheap setup"
   }
 ];
