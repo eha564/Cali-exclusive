@@ -1,20 +1,19 @@
 backend:
 name: git-gateway
-branch: main
+branch: main # Default branch in GitHub
 
-media_folder: "image"
-public_folder: "image"
+media_folder: "image" # Where uploaded images are saved in GitHub
+public_folder: "/image" # How the browser accesses those images
 
 collections:
 - name: "products"
 label: "Products"
-files:
-- file: "products.js"
-label: "Product List"
-name: "product_list"
+folder: "content/products" # Folder storing individual product entries
+create: true
+slug: "{{slug}}"
 fields:
-- { label: "Product Name", name: "name", widget: "string" }
+- { label: "Title", name: "title", widget: "string" }
 - { label: "Price", name: "price", widget: "string" }
-- { label: "Image", name: "img", widget: "image" }
-- { label: "Description", name: "desc", widget: "text" }
+- { label: "Image", name: "image", widget: "image" }
+- { label: "Description", name: "body", widget: "markdown" }
 
