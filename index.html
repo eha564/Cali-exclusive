@@ -16,7 +16,6 @@ body { font-family: 'Outfit', sans-serif; }
 .bg-dark-green { background-color: #0B2B18; }
 .border-gold { border-color: #D4AF37; }
 </style>
-<script src="products.js"></script>
 </head>
 <body class="bg-white text-gray-900 antialiased">
 
@@ -95,13 +94,31 @@ body { font-family: 'Outfit', sans-serif; }
 </a>
 
 <script>
-function renderProducts(){
+function renderProducts() {
 const container = document.getElementById('products');
-if(typeof products === 'undefined' || !Array.isArray(products)){
-container.innerHTML = '<p class="text-red-500">Error loading product data.</p>';
-return;
+
+const productList = [
+{
+name: "G45 Gen5",
+price: "$340",
+img: "image/G45 Gen5.jpg",
+desc: "G45 Gen 5, 9mm. Clean factory setup, classic look."
+},
+{
+name: "G17 Gen3, 9mm",
+price: "$400",
+img: "image/G17 Gen3, 9mm.jpg",
+desc: "G17 Gen 3, 9mm. Full-size, 17-round mag setup, clean black frame."
+},
+{
+name: "Gen5 G47 MOS",
+price: "$540",
+img: "image/Gen5 G47 MOS.jpg",
+desc: "Coyote frame with black slide, RMR HD, SureFire X300."
 }
-container.innerHTML = products.map(p => `
+];
+
+container.innerHTML = productList.map(p => `
 <div class="border border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 bg-white flex flex-col justify-between">
 <div>
 <img src="${p.img}" alt="${p.name}" class="h-64 w-full object-cover bg-gray-50" loading="lazy">
@@ -120,14 +137,14 @@ Enquire / Contact to Order
 `).join('');
 }
 
-function enquire(name){
+function enquire(name) {
 const msgInput = document.getElementById('cMsg');
 msgInput.value = `Hi, I am interested in ordering "${name}" for UK/USA delivery. Please provide further details.`;
 document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
 setTimeout(() => msgInput.focus(), 500);
 }
 
-function sendWhatsApp(e){
+function sendWhatsApp(e) {
 e.preventDefault();
 const phone = "4407874025125";
 const name = document.getElementById('cName').value;
@@ -154,3 +171,4 @@ document.location.href = "/admin/";
 </script>
 </body>
 </html>
+
